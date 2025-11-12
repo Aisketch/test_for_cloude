@@ -80,55 +80,424 @@
 ## 2. VISUAL IDENTITY (Візуальна система)
 
 ### 2.1 Logo System
-_Інформація про логотип не знайдена в наявних файлах_
 
-Доступна інформація:
-- Наявний PDF: "Purple Pink Professional Brand Guidelines Presentation.pdf" (9.3 MB)
-- Наявні PNG файли дизайну (5 файлів)
+**Концепція**: Liquid Mercury (Рідкий метал що застиг)
+- Логотип фіксує мить, коли рідина перетворилась у форму - кристалізація системи
+- Технології, як рідкий метал, плавно адаптуються до користувача
+
+**Варіанти логотипу**:
+
+1. **Vertical Use (Вертикальне)**:
+   - Застосування: Веб-сайт (головна, футер), мобільні додатки, соціальні мережі (аватар), презентації (титульна)
+
+2. **Horizontal Use (Горизонтальне)**:
+   - Застосування: Email підпис, документація, презентації (хедер), друковані матеріали (візитки)
+
+3. **Symbol Use (Тільки символ)**:
+   - Застосування: Favicon, app icon, watermark, малі розміри (менше 32px)
+
+**Кольорові варіації**:
+- Повнокольоровий (з металевим ефектом) - основний для цифрових медіа
+- Градієнтний (бренд-градієнт) - маркетингові матеріали, соціальні медіа
+- Монохромний чорний - документи, чорно-білий друк
+- Монохромний білий - темна тема UI, відео, презентації
+
+**Захисна зона**:
+- Мінімальна вільна зона дорівнює висоті літери "M" у логотипі
+- Застосовується з усіх боків
+
+**Мінімальні розміри**:
+- Цифрові медіа: мінімум 32px висотою
+- Друк: мінімум 15mm висотою
 
 ### 2.2 Brand Mark/Icon
-_Інформація не знайдена в наявних файлах_
+
+**Символ**: Літера "M" з краплею (ефект рідкого металу)
+- **Meaning**: Момент коли рідина перетворюється у фіксовану форму
+- **Usage Context**: Favicon, app icon, малі розміри, watermarks
 
 ---
 
 ## 3. COLOR SYSTEM (Кольорова палітра)
 
-### 3.1 Primary Colors
-_Точні значення кольорів не знайдені в markdown файлах_
+**Філософія**: Liquid Mercury Concept - кольори відображають технологію, що плавно адаптується до потреб
 
-Згадки кольорів у наявних файлах:
-- Purple Pink Professional (з назви PDF презентації)
+### 3.1 Primary Colors
+
+```css
+/* Vibrant Blue (Електричний синій) - Основний бренд-колір */
+--primary: #0066FF;
+--primary-rgb: rgb(0, 102, 255);
+/* Характеристика: Колір іншої реальності — цифрової. Випромінює впевненість та динаміку */
+
+/* Transformational Purple (Трансформаційний фіолетовий) - Акцентний */
+--secondary: #7928CA;
+--secondary-rgb: rgb(121, 40, 202);
+/* Характеристика: Колір влади та розкоші. Візуальний маркер преміального досвіду */
+
+/* Deep Indigo (Глибинний індиго) - Фоновий */
+--accent: #3D25D3;
+--accent-rgb: rgb(61, 37, 211);
+/* Характеристика: Колір стабільності, концентрації та технологічної експертності */
+
+/* Usage: Primary 60%, Secondary 30%, Accent 10% */
+```
+
+**Основний градієнт бренду**:
+```css
+--gradient-primary: linear-gradient(135deg, #7928CA 0%, #3D25D3 50%, #0066FF 100%);
+/* Компоненти: Purple → Indigo → Blue */
+/* Використання: Hero sections, CTA blocks, premium elements */
+```
 
 ### 3.2 Secondary Colors
-_Інформація не знайдена в наявних файлах_
 
-### 3.3 Neutral Colors
-_Інформація не знайдена в наявних файлах_
+**Блакитна гама**:
+```css
+--blue-light: #b3d9ff;    /* Світло-блакитний (фони) */
+--blue-bright: #0582fe;   /* Яскравий синій (акценти) */
+```
 
-### 3.4 Semantic Colors
-_Інформація не знайдена в наявних файлах_
+**Фіолетова гама**:
+```css
+--purple-light: #b19adb;  /* Світлий фіолетовий */
+--purple-medium: #945ddf; /* Середній фіолетовий */
+--purple-dark: #662fbc;   /* Темний фіолетовий */
+--purple-deep: #45148e;   /* Глибокий темно-фіолетовий */
+```
 
-### 3.5 Color Psychology
-_Інформація не знайдена, але можна припустити:_
-- Можлива асоціація з технологіями, інноваціями (якщо використовується purple/pink)
+### 3.3 Neutral Colors (Монохромна палітра)
+
+```css
+/* Backgrounds & Structure */
+--background: #ffffff;         /* Основний фон */
+--background-secondary: #f1f1f1; /* Вторинний фон */
+--foreground: #343a40;         /* Основний текст */
+
+/* Text & Borders */
+--text-secondary: #6c757d;     /* Вторинний текст */
+--border: #6c757d;             /* Рамки */
+--muted: #f1f1f1;              /* Muted елементи */
+--black: #000000;              /* Акцентний текст */
+
+/* Спеціальний ефект */
+--silver-gradient: /* Срібло монохром - металевий градієнт для преміальних елементів */
+```
+
+### 3.4 Semantic Colors (Accent Colors)
+
+```css
+/* Success & Positive Actions */
+--success: #7eeb26;      /* Lime Green - Primary button color */
+--cyan: #7de8ff;         /* Бірюзовий - успіх, нотифікації */
+
+/* Warning & Attention */
+--warning: #d7eb60;      /* Lime Yellow - попередження, виділення */
+
+/* Info */
+--info: #0066FF;         /* Vibrant Blue */
+
+/* Destructive */
+--destructive: #dc3545;  /* Red (не згадується в guidelines, стандарт) */
+```
+
+### 3.5 Color Psychology & Usage
+
+**Vibrant Blue (#0066FF)**:
+- **Значення**: Впевненість, цифрова реальність, дія
+- **Асоціації**: Технології, інновації, надійність
+- **Використання**: CTAs, links, primary interactive elements
+- **Процент**: 60% дизайну
+
+**Transformational Purple (#7928CA)**:
+- **Значення**: Премуальність, трансформація, влада
+- **Асоціації**: Розкіш, еволюція, експертність
+- **Використання**: Highlights, badges, premium features
+- **Процент**: 30% дизайну
+
+**Deep Indigo (#3D25D3)**:
+- **Значення**: Стабільність, глибина, концентрація
+- **Асоціації**: Технічна експертність, надійність
+- **Використання**: Backgrounds, structural elements
+- **Процент**: 10% дизайну
+
+**Lime Green (#7eeb26)**:
+- **Значення**: Дія, позитив, успіх
+- **Використання**: Primary buttons (Continue, Submit, Start)
+
+**Competitor Differentiation**:
+- Відрізняється від конкурентів яскравим синім + фіолетовою гаммою (преміальність)
+- Delphi.ai: більш стримані тони
+- ChatGPT: зелено-сірі
+- MIDOS: енергійний синій + люкс фіолетовий = інноваційний + преміальний
 
 ---
 
 ## 4. TYPOGRAPHY (Типографіка)
 
-_Інформація про шрифти не знайдена в наявних файлах_
+**Концепція**: Три комплементарні шрифти створюють цілісну систему: гуманістичний для заголовків, чіткий для тексту, креативний для акцентів
+
+### 4.1 Font Families
+
+```css
+/* Primary Font (Headings) - Alegreya Sans */
+--font-primary: "Alegreya Sans", sans-serif;
+/* Weights: 400 (Regular), 600 (Semibold), 700 (Bold) */
+/* Source: Google Fonts */
+/* Link: https://fonts.google.com/specimen/Alegreya+Sans */
+/* Характер: Гуманістичний, відкритий, дружній, технологічний */
+/* Використання: Заголовки H1-H3, логотип-супровід, візуальні акценти */
+
+/* Secondary Font (Body) - Inter */
+--font-secondary: "Inter", sans-serif;
+/* Weights: 400 (Regular), 600 (Semibold) */
+/* Source: Google Fonts */
+/* Link: https://fonts.google.com/specimen/Inter */
+/* Характер: Нейтральний, чіткий, універсальний, оптимізований для екранів */
+/* Використання: Основний текст, UI елементи, навігація */
+
+/* Accent Font (Creative accents) - Caveat */
+--font-accent: "Caveat", cursive;
+/* Weights: 400 (Regular) */
+/* Source: Google Fonts */
+/* Link: https://fonts.google.com/specimen/Caveat */
+/* Характер: Креативний, емоційний, рукописний */
+/* Використання: Обмежено - креативні акценти, емоційні виділення */
+```
+
+### 4.2 Type Scale (Desktop)
+
+```css
+/* H1 - Головні заголовки */
+--text-h1: 48-64px | font-family: 'Alegreya Sans' | weight: 700 | line-height: 1.2
+
+/* H2 - Розділи */
+--text-h2: 36-48px | font-family: 'Alegreya Sans' | weight: 700 | line-height: 1.3
+
+/* H3 - Підрозділи */
+--text-h3: 28-36px | font-family: 'Alegreya Sans' | weight: 600 | line-height: 1.4
+
+/* H4 - Заголовки блоків */
+--text-h4: 20-24px | font-family: 'Inter' | weight: 600 | line-height: 1.4
+
+/* Body Large */
+--text-body-lg: 18px | font-family: 'Inter' | weight: 400 | line-height: 1.6
+
+/* Body Regular */
+--text-body: 16px | font-family: 'Inter' | weight: 400 | line-height: 1.6
+
+/* Body Small */
+--text-body-sm: 14px | font-family: 'Inter' | weight: 400 | line-height: 1.5
+
+/* Caption */
+--text-caption: 12px | font-family: 'Inter' | weight: 400 | line-height: 1.4
+
+/* Accent (Creative highlights) */
+--text-accent: Variable | font-family: 'Caveat' | weight: 400 | line-height: 1.4
+```
+
+### 4.3 Type Scale (Mobile)
+
+```css
+/* Adjustments for mobile (<768px) */
+--text-h1-mobile: Зменшити на 20-30% від desktop
+--text-h2-mobile: Зменшити на 20-30%
+--text-h3-mobile: Зменшити на 20-30%
+/* Body text залишається 16px для читабельності */
+```
+
+### 4.4 Typography Rules
+
+**Кольорова типографіка**:
+
+Текст на світлому фоні:
+- Основний: `#343a40` (темно-сірий)
+- Вторинний: `#6c757d` (середньо-сірий)
+- Акцентний: `#0066FF` (Vibrant Blue)
+
+Текст на темному фоні:
+- Основний: `#ffffff` (білий)
+- Вторинний: `#f1f1f1` (світло-сірий)
+- Акцентний: `#7de8ff` (cyan)
+
+Текст на градієнті:
+- Завжди білий `#ffffff`
+- З тінню: `text-shadow: 0 2px 4px rgba(0,0,0,0.2)`
+
+**Letter Spacing**:
+- Tight: -0.02em (для великих заголовків)
+- Normal: 0 (стандарт)
+- Wide: 0.05em (для малих капсів)
+
+**Line Height**:
+- Tight: 1.2 (заголовки H1-H2)
+- Normal: 1.5-1.6 (body text)
+- Relaxed: 1.8 (спеціальні випадки)
+
+**Max Line Length**: 60-80 символів для оптимальної читабельності
 
 ---
 
 ## 5. SPACING & LAYOUT (Відступи та сітка)
 
-_Інформація не знайдена в наявних файлах_
+### 5.1 Spacing Scale
+
+```css
+/* Base unit: 8px */
+--space-xs: 4px
+--space-sm: 8px
+--space-md: 16px
+--space-lg: 24px
+--space-xl: 32px
+--space-2xl: 48px
+--space-3xl: 64px
+--space-4xl: 96px
+```
+
+### 5.2 Grid System
+
+**Breakpoints**:
+```css
+--breakpoint-mobile: 320px-767px    /* Mobile */
+--breakpoint-tablet: 768px-1023px   /* Tablet */
+--breakpoint-desktop: 1024px-1439px /* Desktop */
+--breakpoint-large: 1440px+         /* Large Desktop */
+```
+
+**Адаптація логотипу по breakpoints**:
+- Mobile: Symbol use (32-48px)
+- Tablet: Horizontal use (40-64px)
+- Desktop: Horizontal або Vertical (64-96px)
+
+**Container**:
+- Max width: 1280px
+- Gutter: 24px (desktop), 16px (mobile)
+- Columns: 12-column system
+
+### 5.3 Layout Principles
+
+- **Mobile First**: TRUE - розробка починається з мобільних екранів
+- **Content Width**: 60-80ch для оптимальної читабельності тексту
+- **Section Padding**:
+  - Mobile: py-12 (48px vertical)
+  - Desktop: py-20 (80px vertical)
+- **Whitespace Philosophy**: Generous - багато повітря для преміального відчуття
 
 ---
 
 ## 6. COMPONENTS & UI PATTERNS (Компоненти)
 
-_Інформація не знайдена в наявних файлах_
+### 6.1 Buttons
+
+**Primary Button**:
+```css
+background: #7eeb26 (Lime Green);
+color: #ffffff;
+border-radius: 8px;
+padding: 12px 24px;
+font-family: 'Inter', sans-serif;
+font-weight: 600;
+font-size: 16px;
+transition: all 0.2s ease;
+
+/* Hover */
+box-shadow: 0 8px 24px rgba(126, 235, 38, 0.25);
+transform: translateY(-2px);
+```
+
+**Secondary Button**:
+```css
+background: transparent;
+color: #0066FF;
+border: 2px solid #0066FF;
+border-radius: 8px;
+padding: 12px 24px;
+transition: all 0.2s ease;
+
+/* Hover */
+background: #0066FF;
+color: #ffffff;
+```
+
+**Disabled Button**:
+```css
+background: #f1f1f1;
+color: #6c757d;
+cursor: not-allowed;
+opacity: 0.5;
+```
+
+### 6.2 Cards
+
+```css
+background: #ffffff;
+border-radius: 12px;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+padding: 24px;
+
+/* Hover State */
+box-shadow: 0 8px 24px rgba(0, 102, 255, 0.12);
+transform: translateY(-2px);
+transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1),
+            box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+```
+
+### 6.3 Forms
+
+**Input Fields**:
+```css
+background: #ffffff;
+border: 1px solid #6c757d;
+border-radius: 4px;
+padding: 12px 16px;
+font-family: 'Inter', sans-serif;
+
+/* Focus State */
+border-color: #0066FF;
+box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+
+/* Error State */
+border-color: #dc3545;
+```
+
+**Labels**:
+```css
+font-size: 14px;
+font-weight: 600;
+color: #343a40;
+margin-bottom: 8px;
+```
+
+### 6.4 Navigation
+
+**Header**:
+```css
+height: 64px (desktop), 56px (mobile);
+position: sticky;
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+```
+
+**Links**:
+```css
+color: #343a40;
+font-weight: 600;
+transition: color 0.2s ease;
+
+/* Hover */
+color: #0066FF;
+```
+
+### 6.5 Iconography
+
+- **Icon Library**: Lucide React або custom icons
+- **Icon Size Scale**: 16px, 20px, 24px, 32px, 48px
+- **Icon Style**: Line icons (обведені, 2px товщина)
+- **Icon Colors**:
+  - Основні: `#343a40` або `#0066FF`
+  - Неактивні: `#6c757d`
+  - На темному: `#ffffff`
 
 ---
 
@@ -154,17 +523,59 @@ _Інформація не знайдена в наявних файлах_
 ## 8. MOTION & ANIMATION (Анімація)
 
 ### 8.1 Animation Principles
-_Інформація не знайдена в наявних файлах_
+
+**Philosophy**: Subtle (не перевантажувати користувача)
+- **Purpose**: Delight + feedback + guide attention
+- **Performance**: 60fps, GPU-accelerated
+- **Характер**: Smooth, fluid, liquid-like (відповідає Liquid Mercury концепції)
 
 ### 8.2 Timing Functions
-_Інформація не знайдена в наявних файлах_
+
+```css
+/* Easing (Material Design style) */
+--ease-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+--ease-in: cubic-bezier(0.4, 0, 1, 1);
+--ease-out: cubic-bezier(0, 0, 0.2, 1);
+--ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+/* Duration */
+--duration-fast: 200ms;     /* Micro-interactions, button hovers */
+--duration-normal: 300ms;   /* Standard transitions, cards */
+--duration-slow: 500ms;     /* Page transitions, modals */
+```
 
 ### 8.3 Animation Types
-**Згадка з документів:**
-- Генерація відеоаватара у реальному часі (core технологія)
+
+**Button Hover**:
+```css
+transition: all 0.2s ease;
+transform: translateY(-2px);
+box-shadow: 0 8px 24px rgba(126, 235, 38, 0.25);
+```
+
+**Card Hover**:
+```css
+transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1),
+            box-shadow 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+transform: translateY(-2px);
+box-shadow: 0 8px 24px rgba(0, 102, 255, 0.12);
+```
+
+**Page Transitions**:
+```css
+transition: opacity 0.3s ease-in-out;
+```
+
+**Scroll Animations**: ТАК
+- Fade in on scroll
+- Parallax effects (помірно)
 
 ### 8.4 GSAP Integration
-_Інформація не знайдена в наявних файлах_
+
+- **Library Version**: GSAP 3.x ✓
+- **Plugins Used**: ScrollTrigger (рекомендовано)
+- **Signature Animation**: Liquid Mercury effect - плавні переходи, що нагадують рух рідкого металу
+- **Core технологія**: Генерація відеоаватара у реальному часі
 
 ---
 
@@ -287,9 +698,104 @@ _Інформація не знайдена в наявних файлах_
 
 ## 12. DO'S & DON'TS (Правила)
 
-### 12.1 Product Positioning
+### 12.1 Logo Usage
 
-**✓ DO (з Strategic Integration Master):**
+**✅ ЩО МОЖНА:**
+
+1. **Використовувати офіційні варіанти**:
+   - Vertical, Horizontal, Symbol - згідно контексту
+   - Кольоровий на світлому/темному фоні
+   - Монохромний для обмежених можливостей друку
+
+2. **Дотримуватись мінімальних розмірів**:
+   - Digital: мінімум 32px
+   - Print: мінімум 15mm
+
+3. **Зберігати захисну зону**:
+   - Вільний простір = висота букви "M"
+
+4. **Використовувати правильні фони**:
+   - Кольоровий логотип: білий, світло-сірий фон
+   - Білий логотип: градієнт, темні кольори
+   - Монохромний: будь-який контрастний фон
+
+**❌ ЩО ЗАБОРОНЕНО:**
+
+1. **НЕ змінювати пропорції** - розтягувати/стискати
+2. **НЕ змінювати кольори** - тільки затверджені варіації
+3. **НЕ додавати ефекти** - тіні, обводки, градієнти (крім офіційних)
+4. **НЕ обертати** логотип
+5. **НЕ розміщувати** на складних фонах без підкладки
+6. **НЕ порушувати** захисну зону
+7. **НЕ використовувати** старі версії логотипу
+
+### 12.2 Colors Usage
+
+**✅ DO:**
+- Використовувати color palette консистентно
+- Дотримуватись пропорцій 60/30/10
+- Забезпечити достатній контраст
+- Тестувати кольори в різних контекстах
+
+**Рекомендовані комбінації**:
+
+1. **High contrast (основна)**:
+   - Background: `#ffffff`
+   - Primary: `#0066FF`
+   - Secondary: `#7928CA`
+   - Text: `#343a40`
+
+2. **Темна тема**:
+   - Background: `#343a40`
+   - Primary: `#7de8ff`
+   - Secondary: `#945ddf`
+   - Text: `#ffffff`
+
+3. **Градієнтна**:
+   - Background: `linear-gradient(135deg, #7928CA, #3D25D3, #0066FF)`
+   - Text: `#ffffff`
+   - Accents: `#7de8ff`
+
+**❌ DON'T:**
+- Вводити нові кольори без затвердження
+- Використовувати кольори що не проходять accessibility тести
+- Надмірно використовувати accent colors
+
+### 12.3 Typography
+
+**✅ DO:**
+- Дотримуватись typographic hierarchy
+- Використовувати затверджені font weights
+- Підтримувати читабельність (line-height 1.5-1.6 для body)
+
+**❌ DON'T:**
+- Розтягувати або стискати шрифти
+- Використовувати більше 3 розмірів шрифту на одному екрані
+- Використовувати Caveat (decorative font) для body text
+
+### 12.4 Imagery & Photography
+
+**✅ DO:**
+- Використовувати високоякісні, професійні зображення
+- Фокус на технології, люди з пристроями
+- Світлі, оптимістичні тони
+- Легкий синій фільтр (overlay #0066FF opacity 5-10%)
+- Оптимізувати для web performance (WebP з JPG fallback)
+- Надавати alt text для всіх зображень
+
+**Пропорції зображень**:
+- Hero images: 16:9
+- Card images: 4:3 або 1:1
+- Avatar: 1:1
+
+**❌ DON'T:**
+- Використовувати generic stock photos з водяними знаками
+- Надмірно фільтрувати або редагувати
+- Використовувати зображення з inconsistent style
+
+### 12.5 Product Positioning
+
+**✓ DO (з Strategic Integration Master + Brand Guidelines):**
 - Лідирувати з місійно-орієнтованим меседжем: "Допоможіть 10,000 людям з тією ж якістю"
 - Підкреслювати автентичність: "95%+ рівень відповідності особистості"
 - Використовувати конкретні метрики: "10-кратна ємність клієнтів", "20 годин/тиждень повернуто"

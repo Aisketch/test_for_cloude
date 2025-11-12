@@ -92,43 +92,97 @@
 
 ### 2.2 Дизайн-система (Базові значення)
 
+**Філософія**: Liquid Mercury Concept - технологія плавно адаптується, кольори відображають цифрову реальність
+
 ```css
-/* КОЛЬОРИ - інформація з PDF "Purple Pink Professional Brand Guidelines" */
-/* Точні HSL значення не знайдені в markdown файлах - потрібен аналіз PDF */
---primary: [ПОТРІБЕН АНАЛІЗ PDF - Purple відтінки];
---primary-foreground: [ПОТРІБЕН АНАЛІЗ PDF];
---secondary: [ПОТРІБЕН АНАЛІЗ PDF - Pink відтінки];
---accent: [ПОТРІБЕН АНАЛІЗ PDF];
---background: [ПОТРІБЕН АНАЛІЗ PDF];
---foreground: [ПОТРІБЕН АНАЛІЗ PDF];
---muted: [ПОТРІБЕН АНАЛІЗ PDF];
---border: [ПОТРІБЕН АНАЛІЗ PDF];
+/* КОЛЬОРИ - З MIDOS Brand Guidelines */
+
+/* Primary Brand Colors */
+--primary: #0066FF;  /* Vibrant Blue - електричний синій */
+--primary-foreground: #ffffff;
+--secondary: #7928CA; /* Transformational Purple - преміальний */
+--secondary-foreground: #ffffff;
+--accent: #3D25D3;   /* Deep Indigo - стабільність */
+--accent-foreground: #ffffff;
+
+/* Backgrounds & Text */
+--background: #ffffff;
+--foreground: #343a40; /* Темно-сірий текст */
+--muted: #f1f1f1;      /* Вторинний фон */
+--muted-foreground: #6c757d; /* Вторинний текст */
+--border: #6c757d;
+
+/* Semantic Colors */
+--success: #7eeb26;    /* Lime Green - Primary button! */
+--cyan: #7de8ff;       /* Бірюзовий - нотифікації */
+--warning: #d7eb60;    /* Lime Yellow */
+--destructive: #dc3545;
 
 /* ГРАДІЄНТИ */
---gradient-primary: [ПОТРІБЕН АНАЛІЗ PDF];
---gradient-hero: [ПОТРІБЕН АНАЛІЗ PDF];
+--gradient-primary: linear-gradient(135deg, #7928CA 0%, #3D25D3 50%, #0066FF 100%);
+/* Purple → Indigo → Blue */
+
+--gradient-hero: linear-gradient(135deg, #7928CA, #3D25D3, #0066FF);
+/* Для hero sections та premium блоків */
 
 /* ТІНІ */
---shadow-elegant: [ПОТРІБЕН АНАЛІЗ PDF];
---shadow-card: [ПОТРІБЕН АНАЛІЗ PDF];
+--shadow-elegant: 0 4px 12px rgba(0, 0, 0, 0.08);
+--shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+--shadow-card-hover: 0 8px 24px rgba(0, 102, 255, 0.12);
+--shadow-button: 0 8px 24px rgba(126, 235, 38, 0.25); /* Lime green glow */
 ```
 
-**Примітка**: Є файл "Purple Pink Professional Brand Guidelines Presentation.pdf" (9.3 MB), але точні кольорові значення не вказані в текстових файлах.
+**Пропорції використання кольорів**: 60% основний фон / 30% вторинні елементи / 10% акценти
 
 ### 2.3 Типографіка
 
-- **Primary font**: [ПОТРІБЕН АНАЛІЗ PDF]
-- **Weights used**: [ПОТРІБЕН АНАЛІЗ PDF]
-- **Heading style**: [ПОТРІБЕН АНАЛІЗ PDF]
-- **Body style**: [ПОТРІБЕН АНАЛІЗ PDF]
+**Система трьох шрифтів**:
+
+- **Primary font**: Alegreya Sans (Google Fonts)
+  - Призначення: Заголовки H1-H3, логотип-супровід
+  - Характер: Гуманістичний, відкритий, технологічний
+  - **Weights used**: 400 (Regular), 600 (Semibold), 700 (Bold)
+  - **Link**: https://fonts.google.com/specimen/Alegreya+Sans
+
+- **Secondary font**: Inter (Google Fonts)
+  - Призначення: Body text, UI елементи, навігація
+  - Характер: Нейтральний, чіткий, оптимізований для екранів
+  - **Weights used**: 400 (Regular), 600 (Semibold)
+  - **Link**: https://fonts.google.com/specimen/Inter
+
+- **Accent font**: Caveat (Google Fonts)
+  - Призначення: Креативні акценти (обмежено!)
+  - Характер: Рукописний, емоційний
+  - **Weight**: 400 (Regular)
+
+**Type Scale**:
+- H1: 48-64px (Alegreya Sans Bold) line-height: 1.2
+- H2: 36-48px (Alegreya Sans Bold) line-height: 1.3
+- H3: 28-36px (Alegreya Sans Semibold) line-height: 1.4
+- H4: 20-24px (Inter Semibold) line-height: 1.4
+- Body: 16px (Inter Regular) line-height: 1.6
+- Small: 14px (Inter Regular) line-height: 1.5
+
+- **Heading style**: Tight tracking (-0.02em) для великих заголовків
+- **Body style**: Normal tracking (0), line-height 1.6 для читабельності
 
 ### 2.4 Анімації та Interaction
 
-- **Animation style**: Subtle (з Conversion Analysis: не перевантажувати користувача)
-- **Transition timing**: [ПОТРІБЕН АНАЛІЗ PDF]
-- **Hover effects**: [ПОТРІБЕН АНАЛІЗ PDF]
-- **Scroll animations**: TAK - згадується у документах (fade-in, parallax)
-- **Signature Animation**: Генерація відеоаватара у реальному часі (core технологія)
+- **Animation style**: Subtle + Liquid-like (Liquid Mercury concept)
+- **Transition timing**:
+  - Fast: 200ms (micro-interactions, button hovers)
+  - Normal: 300ms (standard transitions, cards)
+  - Slow: 500ms (page transitions, modals)
+- **Easing**: `cubic-bezier(0.4, 0.0, 0.2, 1)` (Material Design)
+- **Hover effects**:
+  - Buttons: `transform: translateY(-2px)` + shadow glow
+  - Cards: `transform: translateY(-2px)` + increased shadow
+  - Links: `color: #0066FF` transition
+- **Scroll animations**: TAK
+  - Fade in on scroll
+  - Parallax effects (помірно)
+  - ScrollTrigger (GSAP plugin рекомендовано)
+- **Signature Animation**: Liquid Mercury effect - генерація відеоаватара у реальному часі (core технологія)
 
 ---
 
