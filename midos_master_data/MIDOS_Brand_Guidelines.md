@@ -657,12 +657,7 @@ Large Desktop: 1440px+
 ## 7. Контакти та підтримка
 
 **Питання щодо бренду:**
-- Email: brand@midos.ai
-- Slack: #brand-guidelines
-
-**Запит ресурсів:**
-- Brand portal: brand.midos.ai
-- Google Drive: [Brand Assets]
+- Email: hello@midos.io
 
 **Затвердження дизайну:**
 - Необхідна перевірка бренд-менеджером для:
